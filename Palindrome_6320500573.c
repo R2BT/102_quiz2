@@ -1,11 +1,10 @@
 #include<stdio.h>
-#include<string.h>
 int main()
 {
     int n,i,j,sum=0;
-    int p1,p2;
+    int p1,p2,p3;
     scanf("%d",&n);
-    int num[n],cnum[n],newnum[n],onenum[10]={1,2,3,4,5,6,7,8,9};
+    int num[n],cnum[n],newnum[n];
     i=0;
     while(i<n)
     {
@@ -22,24 +21,18 @@ int main()
     while(i<n)
     {
 
-        if(i>8)
+        if(i>8&&i<100)
         {
             p2=cnum[i]%10;
             p1=cnum[i]/10;
             newnum[j]=(p2*10)+p1;
             j++;
         }
-
         i++;
-
     }
     i=0;
     while(i<n)
     {
-        /*if(num[i]==onenum[i])
-        {
-            sum++;
-        }*/
         if(num[i]==newnum[i])
         {
             sum++;
@@ -47,13 +40,5 @@ int main()
         i++;
     }
     printf("%d",sum);
-
-
-
-
-
-
-
-
     return 0;
 }
